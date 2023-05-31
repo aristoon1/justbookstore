@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/acc.css">
-    <title>Tài khoản</title>
+    <title>บัญชีของฉัน</title>
 </head>
 <body>
     <?php include './inc/sidebar.php' ?>
@@ -23,12 +23,12 @@
                                 <span class="ti-mobile"></span>
                             </div>
                             <div class="detail">
-                                <span>Số điện thoại :</span>
-                                <span>0981984623</span>
+                                <span>เบอร์โทรศัพท์ :</span>
+                                <span>0641624115</span>
                             </div>
                         </div>
                         <div class="status">
-                            <button class="button active">Cập nhập</button>
+                            <button class="button active">อัพเดต</button>
                         </div>
                         </div>
                         <div class="list">
@@ -37,44 +37,44 @@
                                 <span class="ti-comment-alt"></span>
                             </div>
                             <div class="detail">
-                                <span>Email :</span>
-                                <span>quynhlinh@gmail.com</span>
+                                <span>อีเมล :</span>
+                                <span>aristoon1@gmail.com</span>
                             </div>
                         </div>
                         <div class="status">
-                            <button class="button active">Cập nhập</button>
+                            <button class="button active">อัพเดต</button>
                         </div>
                         </div>
                     </div>
                     <div class="info-2">
-                    <span class="account-title">Bảo mật</span>
+                    <span class="account-title">ความปลอดภัย</span>
                         <div class="list">
                         <div class="list-item">
                             <div class="info">
                                 <span class="ti-lock"></span>
                             </div>
                             <div class="detail">
-                                <span>Thiết lập mật khẩu</span>
+                                <span>ตั้งค่ารหัสความปลอดภัย</span>
                             </div>
                         </div>
                         <div class="status">
-                            <button class="button active">Cập nhập</button>
+                            <button class="button active">อัพเดต</button>
                         </div>
                         </div>
                     </div>
                     <div class="info-3">
-                    <span class="account-title">Liên kết tài khoản</span>
+                    <span class="account-title">ลิงค์บัญชี</span>
                         <div class="list">
                         <div class="list-item">
                             <div class="info">
                                 <span class="ti-facebook"></span>
                             </div>
                             <div class="detail">
-                                <span>Liên kết facebook</span>
+                                <span>Facebook</span>
                             </div>
                         </div>
                         <div class="status">
-                            <button class="button active">Đã liên kết</button>
+                            <button class="button active">ลิงค์เรียบร้อย</button>
                         </div>
                         </div>
                         <div class="list">
@@ -83,11 +83,11 @@
                                 <span class="ti-instagram"></span>
                             </div>
                             <div class="detail">
-                                <span>Liên kết Instagram</span>
+                                <span>Instagram</span>
                             </div>
                         </div>
                         <div class="status">
-                            <button class="button active">Liên kết</button>
+                            <button class="button active">ลิงค์เรียบร้อย</button>
                         </div>
                         </div>
                         <div class="list">
@@ -96,11 +96,11 @@
                                 <span class="ti-google"></span>
                             </div>
                             <div class="detail">
-                                <span>Liên kết google</span>
+                                <span>Google</span>
                             </div>
                         </div>
                         <div class="status">
-                            <button class="button active">Liên kết</button>
+                            <button class="button active">ลิงค์เรียบร้อย</button>
                         </div>
                         </div>
                         <div class="list">
@@ -109,12 +109,12 @@
                                 <span class="ti-settings"></span>
                             </div>
                             <div class="detail">
-                                <span>Đăng xuất</span>
+                                <span>ออกจากระบบ</span>
                             </div>
                         </div>
                         <div class="status">
                             <button class="button active">
-                                <a href="login.php">Chọn</a>
+                                <a href="login.php">เลือก</a>
                             </button>
                         </div>
                         </div>

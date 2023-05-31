@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="assets/css/sp.css">
-    <title>Sản phẩm</title>
+    <title>แก้ไขสินค้า</title>
 </head>
 <?php include '../classses/category.php';?>
 <?php include '../classses/typeProduct.php';?>
@@ -31,7 +31,7 @@
             <div class="activity-grid">
                 <div class="activity-card">
                     <div class="activity-header">
-                        <h3>Sửa sản phẩm</h3>
+                        <h3>แก้ไขสินค้า</h3>
                     <?php
                         if(isset($updateTypeProduct)){
                             echo $updateTypeProduct;
@@ -47,7 +47,7 @@
             <table class="form">
                 <tr>
                     <td class="form_title">
-                        <label>Nhập tên</label>
+                        <label>ชื่อสินค้า</label>
                     </td>
                     <td>
                         <input type="text" name="typeProductName" value="<?php echo $result_product['typeProductName'] ?>" placeholder="Nhập tên sản phẩm" class="medium" />
@@ -55,11 +55,11 @@
                 </tr>
 				<tr>
                     <td class="form_title">
-                        <label>Danh mục sản phẩm</label>
+                        <label>กลุ่มสินค้า</label>
                     </td>
                     <td>
                         <select id="select" name="category">
-                            <option>Lựa chọn danh mục</option>
+                            <option>เลือกกลุ่มสินค้า</option>
                             <?php
                                 $cat = new category();
                                 $catlist = $cat ->show_category();
@@ -83,7 +83,7 @@
 				<tr>
                     <td></td>
                     <td>
-                        <input type="submit" name="submit" Value="Save" />
+                        <input type="submit" name="submit" Value="บันทึก" />
                     </td>
                 </tr>
             </table>

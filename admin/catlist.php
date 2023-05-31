@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="assets/css/sp.css">
-    <title>Sản phẩm</title>
+    <title>กลุ่มสินค้า</title>
 </head>
 <?php include '../classses/category.php' ?>
 <?php
@@ -25,20 +25,20 @@
             <div class="activity-grid">
                 <div class="activity-card">
                     <div class="activity-header">
-                        <h3>Danh sách sản phẩm</h3>
+                        <h3>ประเภทสินค้า</h3>
                         <div class="activity-more">
                             <span class="ti-plus"></span>
-                            <a href="catadd.php"> <h4>Thêm sản phẩm</h4></a>
+                            <a href="catadd.php"> <h4>เพิ่มประเภทสินค้า</h4></a>
                         </div>
                     </div>
                     <div class="table-responsive">
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Số thứ tự</th>
-                                    <th>Tên danh mục</th>
-                                    <th>Sửa</th>
-                                    <th>Xoá</th>
+                                    <th>หมายเลขสินค้า</th>
+                                    <th>ประเภทสินค้า</th>
+                                    <th>แก้ไขสินค้า</th>
+                                    <th>ลบสินค้า</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <title>Admin</title>
+    <title>ระบบแอดมิน</title>
 </head>
 <?php
 $statistical1 = new statistical();
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     <div class="main-content">
         <?php include './inc/header.php' ?>
         <main>
-            <h2 class="dash-title">Tổng Quan</h2>
+            <h2 class="dash-title">ภาพรวมของข้อมูล</h2>
 
             <div class="dash-cards">
                 <div class="card-single">
@@ -37,12 +37,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                                 $total0 += $result['thanhtien'];
                             }
                             ?>
-                            <h5> Tổng doanh thu</h5>
-                            <h4><?php echo number_format($total0, 0, ',', '.') . "" . "đ"   ?></h4>
+                            <h5> รายได้รวม</h5>
+                            <h4><?php echo number_format($total0, 0, ',', '.') . "" . " บาท"   ?></h4>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="">View all</a>
+                        <a href="">ดูทั้งหมด</a>
                     </div>
                 </div>
                 <div class="card-single">
@@ -57,12 +57,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                                 $dem++;
                             }
                             ?>
-                            <h5> Số lượng khách hàng</h5>
+                            <h5> จำนวนลูกค้า</h5>
                             <h4><?php echo $dem ?></h4>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="">View all</a>
+                        <a href="">ดูทั้งหมด</a>
                     </div>
                 </div>
                 <div class="card-single">
@@ -78,19 +78,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                                 $dem++;
                             }
                             ?>
-                            <h5>Số lượng sản phẩm</h5>
+                            <h5>จำนวนสินค้าทั้งหมด</h5>
                             <h4><?php echo $dem ?></h4>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="">View all</a>
+                        <a href="">ดูทั้งหมด</a>
                     </div>
                 </div>
             </div>
             <section class="recent">
                 <div class="activity-grid">
                     <div class="activity-card">
-                        <h3>Thống kê sản phẩm</h3>
+                        <h3>สถิติของสินค้าทั้งหมด</h3>
                         <div>
                             <form method="POST" action="">
                                 <div class="activity-card-calendar">
@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                                             <input id="datePickerId" value="2022-12-30" name="date2" type="date" data-date-inline-picker="true" />
                                         </div>
                                         <div class="input-group1 mb-3">
-                                            <input id="submit" name="submit" type="submit" value="Tìm kiếm">
+                                            <input id="submit" name="submit" type="submit" value="ค้นหา">
                                         </div>
                                    
                                 </div>
@@ -110,11 +110,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Sản phẩm</th>
-                                                <th>Ảnh</th>
-                                                <th>Giá</th>
-                                                <th>Số lượng bán ra</th>
-                                                <th>Thành tiền</th>
+                                                <th>หมายเลขสินค้า</th>
+                                                <th>รูปภาพสินค้า</th>
+                                                <th>ราคาสินค้า</th>
+                                                <th>จำนวนสินค้าที่ขายแล้ว</th>
+                                                <th>จำนวนเงินทั้งหมด</th>
                                             </tr>
                                         </thead>
                                         <?php
@@ -129,10 +129,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                                                     <tr>
                                                         <td><?php echo $result_dtngay['productName'] ?></td>
                                                         <td><img src="upload/<?php echo $result_dtngay['image'] ?>" alt="" style="width: 100px;"></td>
-                                                        <td><?php echo number_format($result_dtngay['price'], 0, ',', '.') . " " . "đ";   ?></td>
+                                                        <td><?php echo number_format($result_dtngay['price'], 0, ',', '.') . " " . " บาท";   ?></td>
                                                         <td><?php echo  $result_dtngay['value_count'] ?></td>
 
-                                                        <td><?php echo number_format($result_dtngay['value_sumTT'], 0, ',', '.') . " " . "đ"; ?></td>
+                                                        <td><?php echo number_format($result_dtngay['value_sumTT'], 0, ',', '.') . " " . " บาท"; ?></td>
                                                     </tr>
 
                                                 <?php
@@ -145,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                                                     Số lượng sản phẩm bán ra : <?php echo $totalquantity ?>
                                                 </td>
                                                 <td>
-                                                    Tổng tiền bán ra : <?php echo number_format($sumDT, 0, ',', '.') . " " . "đ"; ?>
+                                                    Tổng tiền bán ra : <?php echo number_format($sumDT, 0, ',', '.') . " " . " บาท"; ?>
                                                 </td>
                                                 </tbody>
                                             <?php
@@ -153,7 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                                             ?>
                                                 <tbody>
                                                     <tr>
-                                                        <td colspan="4" style="text-align:center">Không có sản phẩm nào trong mốc thời gian này</td>
+                                                        <td colspan="4" style="text-align:center">ไม่มีสินค้าในไทม์ไลน์นี้</td>
                                                     </tr>
                                                 </tbody>
                                             <?php

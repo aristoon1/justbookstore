@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="assets/css/sp.css">
-    <title>Sản phẩm</title>
+    <title>เพิ่มสินค้า</title>
 </head>
 <?php include '../classses/category.php' ?>
 <?php
@@ -25,7 +25,7 @@
             <div class="activity-grid">
                 <div class="activity-card">
                     <div class="activity-header">
-                        <h3>Thêm sản phẩm</h3>
+                        <h3>เพิ่มสินค้า</h3>
                     </div>
                     <?php
                         if(isset($insertCat)){
@@ -36,12 +36,12 @@
                     <table class="form" style="border-collapse: inherit;">					
                         <tr>
                             <td>
-                                <input type="text" name="catName" placeholder="Thêm sản phẩm vào" class="medium" style="width: 50%;text-align: center;padding: 10px;border-radius: 6px;font-size: 20px;" />
+                                <input type="text" name="catName" placeholder="กรอกชื่อประเภทสินค้า" class="medium" style="width: 50%;text-align: center;padding: 10px;border-radius: 6px;font-size: 20px;" />
                             </td>
                         </tr>
 						<tr> 
                             <td>
-                                <input type="submit" name="submit" Value="Save" style="padding: 10px 20px;border-radius: 6px;color: #fff;background: #323434;" />
+                                <input type="submit" name="submit" Value="บันทึก" style="padding: 10px 20px;border-radius: 6px;color: #fff;background: #323434;" />
                             </td>
                         </tr>
                     </table>

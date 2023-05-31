@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/css/grid.css">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
-    <title>Đăng nhập admin</title>
+    <title>เข้าสู่ระบบแอดมิน</title>
 </head>
 
 <body>
@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <i class="fa fa-lock fa-stack-1x"></i>
             </span>
         </p>
-        <input type="text" name="adminUser" class="login-username" autofocus="true" required="true" placeholder="Tên đăng nhâp" />
-        <input type="password" name="adminPass" class="login-password" required="true" placeholder="Password" />
+        <input type="text" name="adminUser" class="login-username" autofocus="true" required="true" placeholder="ชื่อผู้ใช้งาน" />
+        <input type="password" name="adminPass" class="login-password" required="true" placeholder="รหัสผ่าน" />
         <div class="login-form-waring" >
             <?php
             if (isset($login_check)) {
@@ -39,10 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             ?>
         </div>
-        <input type="submit" name="Login" value="Login" class="login-submit" />
+        <input type="submit" name="Login" value="เข้าสู่ระบบ" class="login-submit" />
 
     </form>
-    <a href="#" class="login-forgot-pass">forgot password?</a>
+    <a href="#" class="login-forgot-pass">ลืมรหัสผ่าน ?</a>
     <div class="underlay-photo"></div>
     <div class="underlay-black"></div>
     <!-- partial -->
