@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin tài khoản </title>
+    <title>บัญชีของฉัน </title>
 </head>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
@@ -39,51 +39,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
                                 border-bottom: 1px solid #ccc;">
                                     <span class="ti-user" style="padding: 10px;border: 1px solid;border-radius: 50%;"></span>
                                     <a href="" style="text-decoration: none;padding: 0 10px;font-family: var(--font-family-monospace); color: black;
-                                font-weight: bold"> Quỳnh Linh</a>
+                                font-weight: bold"> บัญชีของฉัน</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-user"></span>
-                                    <a href=""> Thông tin tài khoản</a>
+                                    <a href=""> ข้อมูลเกี่ยวกับบัญชี</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-comments"></span>
-                                    <a href=""> Thông báo của tôi</a>
+                                    <a href=""> การแจ้งเตือนของบัญชี</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-printer"></span>
-                                    <a href="donhang.php"> Quản lý đơn hàng</a>
+                                    <a href="donhang.php"> การจัดการคำสั่งซื้อ</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-location-pin"></span>
-                                    <a href=""> Số địa chỉ</a>
+                                    <a href=""> ที่อยู่</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-envelope"></span>
-                                    <a href=""> Thông tin thanh toán</a>
+                                    <a href=""> ข้อมูลการเรียกเก็บเงิน</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-write"></span>
-                                    <a href=""> Nhận xét sản phẩm đã mua</a>
+                                    <a href=""> รีวิวสินค้าที่ซื้อ</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-ink-pen"></span>
-                                    <a href=""> Sản phẩm đã xem</a>
+                                    <a href=""> ดูสินค้า</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-ink-pen"></span>
-                                    <a href=""> Sản phẩm yêu thích</a>
+                                    <a href=""> สินค้าที่ถูกใจ</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-shopping-cart-full"></span>
-                                    <a href=""> Sản phẩm mua sau</a>
+                                    <a href=""> สินค้าที่จะซื้อในภายหลัง</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-star"></span>
-                                    <a href=""> Nhận xét của tôi</a>
+                                    <a href=""> รีวิวสินค้าของฉัน</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-ticket"></span>
-                                    <a href=""> Mã giảm giá</a>
+                                    <a href=""> โค้ดส่วนลดสินค้า</a>
                                 </li>
                             </ul>
                         </div>
@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
                             <div class="row">
                                 <div class="col l-7 m-12 underline">
                                     <div class="account-tt">
-                                        <span class="account-title">Thông tin cá nhân</span>
+                                        <span class="account-title">ข้อมูลส่วนตัว</span>
                                     </div>
                                     <?php
                                     $userId = Session::get('user_id');
@@ -103,39 +103,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
                                         <form action="" method="post">
                                             <div class="information">
                                                 <div class="information-name">
-                                                    <label>Họ & Tên</label>
+                                                    <label>ชื่อ - นามสกุล</label>
                                                     <input type="text" name="name" value="<?php echo $result_infor_user['name'] ?>">
                                                 </div>
                                                 <div class="information-name">
-                                                    <label>Số điện thoại</label>
+                                                    <label>เบอร์โทรศัพท์</label>
                                                     <input type="text" name="phone" value="<?php echo $result_infor_user['sdt'] ?>">
                                                 </div>
                                                 <div class="information-name">
-                                                    <label>Email</label>
+                                                    <label>อีเมล</label>
                                                     <input type="text" name="email" value="<?php echo $result_infor_user['email'] ?>">
                                                 </div>
                                                 <div class="information-name">
-                                                    <label>Ngày sinh</label>
+                                                    <label>วันเกิด</label>
                                                     <input type="text" name="date" value="<?php echo $result_infor_user['ngaySinh'] ?>">
                                                 </div>
                                                 <div class="information-name">
-                                                    <label>Địa chỉ</label>
+                                                    <label>ที่อยู่</label>
                                                     <input type="text" name="address" value="<?php echo $result_infor_user['diaChi'] ?>">
                                                 </div>
                                                 <div class="information-sex">
-                                                    <label>Giới tính</label>
+                                                    <label>เพศ</label>
                                                     <?php if ($result_infor_user['gioiTinh'] == "Nam" || $result_infor_user['gioiTinh'] == "nam") { ?>
                                                         <input type="radio" checked="true" name="sex" id="Boy" value="Nam">
-                                                        <label for="Nam">Nam</label>
+                                                        <label for="Nam">ชาย</label>
                                                         <input type="radio" name="sex" id="Girl" value="Nữ">
-                                                        <label for="Nu">Nữ</label>
+                                                        <label for="Nu">หญิง</label>
                                                     <?php
                                                     } else {
                                                     ?>
                                                         <input type="radio" name="sex" id="Boy" value="Nam">
-                                                        <label for="Nam">Nam</label>
+                                                        <label for="Nam">ชาย</label>
                                                         <input type="radio" checked="true" name="sex" id="Girl" value="Nữ">
-                                                        <label for="Nu">Nữ</label>
+                                                        <label for="Nu">หญิง</label>
                                                     <?php } ?>
                                                 </div>
                                                 <div style="text-align: center;margin: 15px;">
@@ -147,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
                                                 </div>
 
                                                 <div class="infotmation-save">
-                                                    <input type="submit" name="save" value="Lưu thay đổi">
+                                                    <input type="submit" name="save" value="บันทึกข้อมูล">
                                                 </div>
 
 

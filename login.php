@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <link rel="shortcut icon" href="assets/img/favicon_created_by_logaster.ico" type="image/x-icon">
-    <title>Đăng nhập</title>
+    <title>เข้าสู่ระบบ</title>
 </head>
 <?php
 	if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
@@ -28,22 +28,22 @@
                         <div class="fix-content col c-5">
                             <div class="auth__form">
                                 <div class="auth__form-container">
-                                    <div class="form-container-title">Bạn đã có tài khoản MLL
+                                    <div class="form-container-title">เข้าสู่ระบบ
                                         <p>
-                                            Nếu bạn đã có tài khoản, hãy đăng nhập để tích lũy điểm
-                                            thành viên và nhận được những ưu đãi tốt hơn!
+                                        หากคุณมีบัญชีอยู่แล้วเข้าสู่ระบบ
+                                        เพื่อสะสมคะแนนสมาชิกและรับข้อเสนอที่ดีกว่า!
                                         </p>
                                     </div>
                                     <div class="row">
                                         <div class="auth__form-group1 col c-12 ">
-                                            <input type="text" name="username" class="auth__form-input" placeholder="Tên đăng nhập">
+                                            <input type="text" name="username" class="auth__form-input" placeholder="ชื่อผู้ใช้งาน">
                                         </div>
                                         <div class="auth__form-group1 col c-12">
-                                            <input type="password" name="password" class="auth__form-input" placeholder="Mật khẩu">
+                                            <input type="password" name="password" class="auth__form-input" placeholder="รหัสผ่าน">
                                         </div>
                                     </div>
                                     <div style="text-align: right;">
-                                        <a href="quenMatKhau.php" style="font-family: var(--font-family-monospace);color: #221f20;">Quên mật khẩu</a>
+                                        <a href="quenMatKhau.php" style="font-family: var(--font-family-monospace);color: #221f20;">ลืมรหัสผ่าน ?</a>
                                     </div>
                                     <div class="baoloi">
                                     <?php
@@ -52,7 +52,7 @@
                                         }
                                     ?>
                                     </div>
-                                    <input type="submit" name="submit" value="Đăng nhập" class="btn btn-login mt-16">
+                                    <input type="submit" name="submit" value="เข้าสู่ระบบ" class="btn btn-login mt-16">
                                 </div>
                             </div>
                         </div>
@@ -63,14 +63,14 @@
                         <div class="col c-5">
                             <div class="auth__form">
                                 <div class="auth__form-container">
-                                    <div class="form-container-title">Khách hàng mới của MLL
+                                    <div class="form-container-title">สร้างบัญชี
                                         <p>                              
-                                            Nếu bạn chưa có tài khoản trên mll.com, hãy sử dụng tùy chọn này để truy cập biểu mẫu đăng ký.
-                                            Bằng cách cung cấp cho IVY moda thông tin chi tiết của bạn, quá trình mua hàng trên ivymoda.com sẽ là một trải nghiệm thú vị và nhanh chóng hơn!
+                                            หากคุณยังไม่เคยเป็นสมาชิกกับเว็บไซต์ สามารถใช้ตัวเลือกนี้เพื่อสมัครสมาชิกกับเว็บไซต์ของเรา
+                                            ด้วยการให้รายละเอียดของคุณกับทางเว็บไซต์ คุณจะได้รับข่าวสารและโปรโมชั่นใหม่ๆจากทางเราก่อนใคร!
                                         </p>
                                     </div>
                                     <div class="btn-login1">
-                                        <a href="dangky.php">Đăng ký </a>
+                                        <a href="dangky.php">สมัครสมาชิก</a>
                                     </div>
                                 </div>
                             </div>

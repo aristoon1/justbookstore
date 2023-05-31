@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đổi mật khẩu người dùng </title>
+    <title>เปลี่ยนรหัสผ่าน </title>
 </head>
 <?php
 if (isset($_POST['doimatkhau']) && $_POST['password_cu']!="" && $_POST['password_moi'] != "") {
@@ -31,10 +31,10 @@ if (isset($_POST['doimatkhau']) && $_POST['password_cu']!="" && $_POST['password
         $up = $user->updatedoimatkhau($matkhaumoi);
         
     } else{
-        $up = '<span class="ErrorUpdate_pass">Nhập sai mật khẩu, mời nhập lại !</span>';
+        $up = '<span class="ErrorUpdate_pass">ใส่รหัสผ่านผิด กรุณาใส่ใหม่ !</span>';
     }
 }else{
-    $up = '<span class="ErrorUpdate_pass">Bạn chưa nhập mật khẩu ?</span>';
+    $up = '<span class="ErrorUpdate_pass">ยังไม่ได้ใส่รหัสของคุณ ?</span>';
 }
 ?>
 
@@ -49,7 +49,7 @@ if (isset($_POST['doimatkhau']) && $_POST['password_cu']!="" && $_POST['password
                 <div class="account-me">
                     <div class="">
                         <div class="account-tt">
-                            <span class="account-title">Thay đổi mật khẩu người dùng</span>
+                            <span class="account-title">เปลี่ยนรหัสผ่าน</span>
                         </div>
                         <?php
                         $userId = Session::get('user_id');
@@ -59,15 +59,15 @@ if (isset($_POST['doimatkhau']) && $_POST['password_cu']!="" && $_POST['password
                             <form action="" method="post">
                                 <div class="information">
                                     <div class="information-name">
-                                        <label>Tài khoản</label>
+                                        <label>ชื่อผู้ใช้งาน</label>
                                         <input readonly="readonly" type="text" name="username" value="<?php echo $result_infor_user['username'] ?>">
                                     </div>
                                     <div class="information-name">
-                                        <label>Mật khẩu cũ</label>
+                                        <label>รหัสผ่านเก่า</label>
                                         <input type="password" name="password_cu" value="">
                                     </div>
                                     <div class="information-name">
-                                        <label>Mật khẩu mới</label>
+                                        <label>รหัสผ่านใหม่</label>
                                         <input type="password" name="password_moi" value="">
                                     </div>
                                     <div style="display: flex;justify-content: center;">
@@ -80,14 +80,14 @@ if (isset($_POST['doimatkhau']) && $_POST['password_cu']!="" && $_POST['password
                                         
                                     <div style="display: flex;justify-content: end;" class="infotmation-save">
                                         
-                                        <input type="submit" name="doimatkhau" value="Lưu thay đổi">
+                                        <input type="submit" name="doimatkhau" value="เสร็จสิ้น">
                                     </div>
                             </form>
                             <div style="padding: 20px 0;">
                                 <div>
                                     <a style="color:black; font-size: 20px; margin-top: 20px;margin-right: 150px;display: flex;align-items: center;" href="index.php">
                                         <span class="ti-arrow-left"></span>
-                                        <span>Trở lại</span>
+                                        <span>ย้อนกลับ</span>
                                     </a>
                                 </div>
                             </div>

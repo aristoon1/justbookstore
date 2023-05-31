@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<title>Giỏ hàng</title>
+	<title>ตะกร้าสินค้า</title>
 </head>
 <?php
 // Cập nhập số lượng sản phẩm vào giỏ hàng
@@ -54,28 +54,25 @@ if (!isset($_GET['id'])) {
 								<div class="checkout-process-bar block-border">
 									<ul>
 										<li class="active">
-											<span>Giỏ hàng</span>
+											<span>ตะกร้าสินค้า</span>
 										</li>
-										<li class=""><span>Đặt hàng</span></li>
-										<li class=""><span>Thanh toán</span></li>
-										<li><span>Hoàn thành đơn</span></li>
+										<li class=""><span>ตรวจสอบสินค้า</span></li>
+										<li class=""><span>ชำระสินค้า</span></li>
 									</ul>
 								</div>
 							</div>
 							<div class="col l-12">
-								<h1 style="margin: 20px;font-weight: 600;font-size: 24px;line-height: 32px;color: #221f20;font-family: var(--font-family-sans-serif);">Giỏ hàng của bạn </h1>
+								<h1 style="margin: 20px;font-weight: 600;font-size: 24px;line-height: 32px;color: #221f20;font-family: var(--font-family-sans-serif);">ตะกร้าสินค้าของคุณ </h1>
 							</div>
 							<div class="col l-12 dal">
 								<table>
 									<thead>
 										<tr>
-											<th>Ảnh sản phẩm</th>
-											<th>Tên Sản Phẩm</th>
-											<th>Size</th>
-											<th>Giá</th>
-											<th>Số lượng</th>
-											<th>Số tiền</th>
-											<th>Trạng thái</th>
+											<th>รูปภาพสินค้า</th>
+											<th>ชื่อสินค้า</th>
+											<th>จำนวนสินค้า</th>
+											<th>ราคาสินค้า</th>
+											<th>สถานะ</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -102,7 +99,7 @@ if (!isset($_GET['id'])) {
 													</td>
 													<td>
 														<div class="cart-btn">
-															<span><?php echo number_format($result_ProductCat['price'], 0, ',', '.') . "" . "đ" ?></span>
+															<span><?php echo number_format($result_ProductCat['price'], 0, ',', '.') . "" . " บาท" ?></span>
 														</div>
 													</td>
 													<td>
@@ -159,7 +156,7 @@ if (!isset($_GET['id'])) {
 
 													<td>
 														<span class="cart-current"><?php $total = $result_ProductCat['price'] * $result_ProductCat['quantity'];
-																					echo number_format($total, 0, ',', '.') . "" . "đ";
+																					echo number_format($total, 0, ',', '.') . "" . " บาท";
 
 																					?></span>
 													</td>
@@ -191,21 +188,21 @@ if (!isset($_GET['id'])) {
 									<span class="ti-arrow-left" style="padding: 0 10px;">
 
 									</span>
-									Tiếp tục mua hàng
+									ดูสินค้าต่อ
 								</a>
 							</div>
 
 						</div>
 						<div class="col l-4">
 							<div class="cart-voucher">
-								<h3>Tổng tiền giỏ hàng</h3>
+								<h3>จำนวนตะกร้าสินค้าทั้งหมด</h3>
 								<?php
 								$check_cart = $cat->checkCart(Session::get('user_id'));
 								if ($check_cart) {
 								?>
 									<div style="display: flex;justify-content: space-between; margin: 20px 0;">
 										<span class="voucher-title">
-											<span>Tổng sản phẩm</span>
+											<span>จำนวนสินค้า</span>
 										</span>
 										<span class="sum-product"><?php
 											Session::set('sum', $dem);
@@ -214,30 +211,30 @@ if (!isset($_GET['id'])) {
 									</div>
 									<div style="display: flex;justify-content: space-between; margin: 20px 0;">
 										<div class="voucher-title">
-											<span>Tổng tiền hàng</span>
+											<span>ราคาสินค้า</span>
 										</div>
-										<span class="sum-product"><?php echo number_format($subTotal, 0, ',', '.') . "" . "đ" ?></span>
+										<span class="sum-product"><?php echo number_format($subTotal, 0, ',', '.') . "" . " บาท" ?></span>
 									</div>
 									<div style="display: flex;justify-content: space-between; margin: 20px 0;">
-										<span class="sum-product">Tiền thuế(VAT 10%)</span>
+										<span class="sum-product">ภาษี (VAT 10%)</span>
 										<span class="sum-product">
 											<?php
 											$vat = $subTotal * 0.1;
-											echo number_format($vat, 0, ',', '.') . "" . "đ";
+											echo number_format($vat, 0, ',', '.') . "" . " บาท";
 											?>
 										</span>
 									</div>
 									<div class="cart-purchase">
-										<span class="sum-product">Thành tiền</span>
+										<span class="sum-product">ราคาทั้งหมด</span>
 										<span class="sum-product" style="font-weight: 800;">
 											<?php
 											$grand_Total = $subTotal - $vat;
-											echo number_format($grand_Total, 0, ',', '.') . "" . "đ"
+											echo number_format($grand_Total, 0, ',', '.') . "" . " บาท"
 											?>
 										</span>
 									</div>
 									<div class="cart-purchase-button">
-										<a href="thanhtoan.php"><button>Mua hàng</button></a>
+										<a href="thanhtoan.php"><button>สั่งซื้อ</button></a>
 									</div>
 								<?php
 								} else {

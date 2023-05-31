@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/grid.css">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <link rel="shortcut icon" href="assets/img/favicon_created_by_logaster.ico" type="image/x-icon">
-    <title>Đăng ký tài khoản</title>
+    <title>ลงทะเบียน</title>
 </head>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
             <div class="app_content-all">
                 <div class="row">
                     <div class="auth__form-header">
-                        <h2>ĐĂNG KÝ</h2>
+                        <h2>ลงทะเบียน</h2>
                     </div>
                 </div>
                 <form action="" method="post" class="auth__form-form">
@@ -36,48 +36,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                         <div class="col c-6">
                             <div class="auth__form">
                                 <div class="auth__form-container">
-                                    <div class="auth__form-container-title">Thông tin khách hàng</div>
+                                    <div class="auth__form-container-title"> </div>
                                     <div class="row">
                                         <div class="auth__form-group col c-6 ">
                                             <div class="auth__form-group-title">
-                                                <span>Họ và tên</span>
+                                                <span>ชื่อ - นามสกุล</span>
                                                 <span style="color: red;">*</span>
                                             </div>
-                                            <input type="text" name="name" class="auth__form-input" placeholder="Nhập họ và tên">
+                                            <input type="text" name="name" class="auth__form-input" placeholder="">
                                         </div>
                                         <div class="auth__form-group col c-6">
                                             <div class="auth__form-group-title">
-                                                <span>Email</span>
+                                                <span>อีเมล</span>
                                                 <span style="color: red;">*</span>
                                             </div>
-                                            <input type="text" name="email" class="auth__form-input" placeholder="Nhập địa chỉ email">
+                                            <input type="text" name="email" class="auth__form-input" placeholder="">
                                         </div>
                                         <div class="auth__form-group col c-6">
                                             <div class="auth__form-group-title">
-                                                <span>Số điện thoại</span>
+                                                <span>เบอร์โทรศัพท์</span>
                                                 <span style="color: red;">*</span>
                                             </div>
-                                            <input type="text" name="phone" class="auth__form-input" placeholder="Nhập số điện thoại">
+                                            <input type="text" name="phone" maxlength="10" class="auth__form-input" placeholder="">
                                         </div>
                                         <div class="auth__form-group col c-6">
                                             <div class="auth__form-group-title">
-                                                <span>Giới tính</span>
+                                                <span>เพศ</span>
                                                 <span style="color: red;">*</span>
                                             </div>
-                                            <input type="text" name="sex" class="auth__form-input" placeholder="Nhập giới tính">
+                                            <input type="text" name="sex" class="auth__form-input" placeholder="">
                                         </div>
                                         <div class="auth__form-group col c-6">
                                             <div class="auth__form-group-title">
-                                                <span>Ngày sinh</span>
+                                                <span>วันเกิด</span>
                                                 <span style="color: red;">*</span>
                                             </div>
-                                            <input type="text" name="date" class="auth__form-input" placeholder="Nhập ngày sinh">
+                                            <input type="text" name="date" class="auth__form-input" placeholder="">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="auth__form-group col c-12">
                                             <div class="auth__form-group-title">
-                                                <span>Địa chỉ</span>
+                                                <span>ที่อยู่</span>
                                                 <span style="color: red;">*</span>
                                             </div>
                                             <textarea name="address" id="" cols="30" rows="10"></textarea>
@@ -88,38 +88,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                             </div>
                         </div>
                         <div class="col c-6">
-                            <div class="auth__form-container-title">Thông tin đăng ký</div>
+                            <div class="auth__form-container-title"> </div>
                             <div class="row">
                                 <div class="auth__form-group col c-12 ">
                                     <div class="auth__form-group-title">
-                                        <span>Tên đăng nhập</span>
+                                        <span>ชื่อผู้ใช้งาน</span>
                                         <span style="color: red;">*</span>
                                     </div>
-                                    <input type="text" name="username" class="auth__form-input" placeholder="Nhập tên đăng nhập">
+                                    <input type="text" name="username" class="auth__form-input" placeholder="">
                                 </div>
                                 <div class="auth__form-group col c-12 ">
                                     <div class="auth__form-group-title">
-                                        <span>Mật khẩu</span>
+                                        <span>รหัสผ่าน</span>
                                         <span style="color: red;">*</span>
                                     </div>
-                                    <input type="password" name="password" class="auth__form-input" placeholder="Nhập mật khẩu">
+                                    <input type="password" name="password" class="auth__form-input" placeholder="">
                                 </div>
                                 <div class="auth__form-group col c-12 ">
                                     <div class="auth__form-group-title">
-                                        <span>Nhập lại mật khẩu</span>
+                                        <span>ยืนยันรหัสผ่าน</span>
                                         <span style="color: red;">*</span>
                                     </div>
-                                    <input type="password" name="relyPassword" class="auth__form-input" placeholder="Nhập lại mật khẩu">
+                                    <input type="password" name="relyPassword" class="auth__form-input" placeholder="">
                                 </div>
                                 <div class="auth__form-group col c-12 ">
                                     <select class="auth__form-input" id="select" name="category">
-                                        <option>Lựa chọn câu hỏi</option>
-                                        <option>Bạn thích ai nhất ?</option>
-                                        <option>Bố bạn tên gì?</option>
-                                        <option>Số tài khoản bạn là bao nhiêu?</option>
-                                        <option>Bạn thích ăn món gì?</option>
+                                        <option>คำถามยืนยันตัวตน</option>
+                                        <option>คุณแอบชอบใคร ?</option>
+                                        <option>ชื่อบิดาของคุณ ?</option>
+                                        <option>หมายเลขบัญชีของคุณ ?</option>
+                                        <option>อาหารที่คุณชอบ ?</option>
                                     </select>
-                                    <input type="password" name="cauHoiBiMat" class="auth__form-input" placeholder="Trả lời câu hỏi bí mật">
+                                    <input type="" name="cauHoiBiMat" class="auth__form-input" placeholder="คำตอบของคุณ">
                                 </div>
                             </div>
                             <div class="baoloi">
@@ -129,9 +129,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                                 }
                                 ?>
                             </div>
-                            <input type="submit" name="submit" value="Đăng ký" class="btn btn-login mt-16">
+                            <input type="submit" name="submit" value="สมัครสมาชิก" class="btn btn-login mt-16">
                             <div style="text-align: right ; padding: 15px 0;">
-                                <a href="login.php" style="color: #221f20;font-family: var(--font-family-sans-serif);margin: 24px;">Đăng nhập</a>
+                                <a href="login.php" style="color: #221f20;font-family: var(--font-family-sans-serif);margin: 24px;">เข้าสู่ระบบ</a>
                             </div>
 
                         </div>

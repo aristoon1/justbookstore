@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <title>Giỏ hàng</title>
+    <title>ตะกร้าสินค้า</title>
 </head>
 <?php
 //hủy đơn
@@ -59,67 +59,67 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                 border-bottom: 1px solid #ccc;">
                                     <span class="ti-user" style="padding: 10px;border: 1px solid;border-radius: 50%;"></span>
                                     <a href="" style="text-decoration: none;padding: 0 10px;font-family: var(--font-family-monospace); color: black;
-                                font-weight: bold"> Quỳnh Linh</a>
+                                font-weight: bold"> บัญชีของฉัน</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-user"></span>
-                                    <a href=""> Thông tin tài khoản</a>
+                                    <a href=""> ข้อมูลเกี่ยวกับบัญชี</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-comments"></span>
-                                    <a href=""> Thông báo của tôi</a>
+                                    <a href=""> การแจ้งเตือนของบัญชี</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-printer"></span>
-                                    <a href="tinhtrangdonhang.php"> Tình trạng đơn hàng</a>
+                                    <a href="tinhtrangdonhang.php"> สถานะของสินค้า</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-printer"></span>
-                                    <a href="lichsu.php"> Quản lý đơn hàng</a>
+                                    <a href="lichsu.php"> การจัดการคำสั่งซื้อ</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-location-pin"></span>
-                                    <a href=""> Số địa chỉ</a>
+                                    <a href=""> ที่อยู่</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-envelope"></span>
-                                    <a href=""> Thông tin thanh toán</a>
+                                    <a href=""> ข้อมูลการเรียกเก็บเงิน</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-write"></span>
-                                    <a href=""> Nhận xét sản phẩm đã mua</a>
+                                    <a href=""> รีวิวสินค้าที่ซื้อ</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-ink-pen"></span>
-                                    <a href=""> Sản phẩm đã xem</a>
+                                    <a href=""> ดูสินค้า</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-ink-pen"></span>
-                                    <a href=""> Sản phẩm yêu thích</a>
+                                    <a href=""> สินค้าที่ถูกใจ</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-shopping-cart-full"></span>
-                                    <a href=""> Sản phẩm mua sau</a>
+                                    <a href=""> สินค้าที่จะซื้อในภายหลัง</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-star"></span>
-                                    <a href=""> Nhận xét của tôi</a>
+                                    <a href=""> รีวิวสินค้าของฉัน</a>
                                 </li>
                                 <li class="category">
                                     <span class="ti-ticket"></span>
-                                    <a href=""> Mã giảm giá</a>
+                                    <a href=""> โค้ดส่วนลดสินค้า</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col m-12 l-9">
-                        <h3 style="font-weight: 500;font-size: 24px;line-height: 32px;text-transform: uppercase;color: #221f20;display: flex;align-items: center;">Quản lí đơn hàng</h3>
+                        <h3 style="font-weight: 500;font-size: 24px;line-height: 32px;text-transform: uppercase;color: #221f20;display: flex;align-items: center;">การจัดการคำสั่งซื้อ</h3>
                         <ul style="display:flex;">
-                            <li class="QLdonhang" onclick="changeProductList('choXN',this)">Chờ xác nhận</li>
-                            <li class="QLdonhang" onclick="changeProductList('daNH',this)">Đang giao</li>
-                            <li class="QLdonhang" onclick="changeProductList('daGiao',this)">Đã giao</li>
-                            <li class="QLdonhang" onclick="changeProductList('traHang',this)">Trả hàng</li>
-                            <li class="QLdonhang" onclick="changeProductList('daHuy',this)">Đã hủy</li>
+                            <li class="QLdonhang" onclick="changeProductList('choXN',this)">รอการยืนยันสินค้า</li>
+                            <li class="QLdonhang" onclick="changeProductList('daNH',this)">กำลังจะส่งสินค้า</li>
+                            <li class="QLdonhang" onclick="changeProductList('daGiao',this)">ส่งสินค้าเสร็จเรียบร้อย</li>
+                            <li class="QLdonhang" onclick="changeProductList('traHang',this)">สินค้าตีกลับ</li>
+                            <li class="QLdonhang" onclick="changeProductList('daHuy',this)">ยกเลิกสินค้า</li>
                         </ul>
                         <div class="col l-12">
                             <!-- <table id="choXN" class="table table_0"> -->
@@ -136,9 +136,9 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                     <table id="choXN" class="choXN table_0">
                                         <thead>
                                             <tr>
-                                                <th>Đơn hàng: <?php echo $count; ?></th>
-                                                <th colspan="5">Ngày đặt: <?php echo $result_date['order_time']; ?></th>
-                                                <th colspan="2" class="toggle">Xem chi tiết</th>
+                                                <th>สินค้า: <?php echo $count; ?></th>
+                                                <th colspan="5">วันที่จองสินค้า: <?php echo $result_date['order_time']; ?></th>
+                                                <th colspan="2" class="toggle">ดูรายละเอียดการสั่งซื้อ</th>
                                             </tr>
                                         </thead>
                                         <!-- </table> -->
@@ -146,15 +146,15 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                         <table class="display display_0">
                                             <thead style="background-color:blue;">
                                                 <tr>
-                                                    <th>STT</th>
-                                                    <th>Ảnh</th>
-                                                    <th>Tên</th>
-                                                    <th>Size</th>
-                                                    <th>Giá</th>
-                                                    <th>Số lượng</th>
-                                                    <th>Thành tiền</th>
-                                                    <th>Địa chỉ</th>
-                                                    <th>Tình trạng</th>
+                                                    <th>หมายเลขสินค้า</th>
+                                                    <th>รูปภาพสินค้า</th>
+                                                    <th>ชื่อสินค้า</th>
+                                                    <th>ขนาด</th>
+                                                    <th>ราคาสินค้า</th>
+                                                    <th>จำนวนสินค้า</th>
+                                                    <th>จำนวนเงิน</th>
+                                                    <th>ที่อยู่</th>
+                                                    <th>สถานะของสินค้า</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -182,7 +182,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                             <td><?php echo $result_OrderHistory0['size'] ?></td>
                                                             <td>
                                                                 <div class="cart-btn">
-                                                                    <span><?php echo number_format($result_OrderHistory0['price'], 0, ',', '.') . "" . "đ" ?></span>
+                                                                    <span><?php echo number_format($result_OrderHistory0['price'], 0, ',', '.') . "" . " บาท" ?></span>
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -196,7 +196,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
 
                                                             <td>
                                                                 <span class="cart-current"><?php
-                                                                                            echo number_format($result_OrderHistory0['thanhtien'], 0, ',', '.') . " " . "đ";
+                                                                                            echo number_format($result_OrderHistory0['thanhtien'], 0, ',', '.') . " " . " บาท";
                                                                                             ?></span>
                                                             </td>
                                                             <td>
@@ -204,18 +204,18 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                                 echo $result_OrderHistory0['order_time'];
                                                                 ?>
                                                             </td>
-                                                            <td style="color:red;cursor:pointer">Đang chờ xác nhận</td>
+                                                            <td style="color:red;cursor:pointer">รอการยืนยันสินค้า</td>
 
                                                         </tr>
                                                     <?php
                                                     }
 
                                                     ?>
-                                                    <td colspan="7" style="background-color:#2a2b2c;text-align:center;color:white;">Tổng đơn hàng: <?php echo number_format($total0, 0, ',', '.') . "" . "đ"; ?></td>
+                                                    <td colspan="7" style="background-color:#2a2b2c;text-align:center;color:white;">ยอดสั่งซื้อ: <?php echo number_format($total0, 0, ',', '.') . "" . " บาท"; ?></td>
                                                     <td colspan="3" class="huy_don" style="background-color:#2a2b2c;">
                                                         <div style="display: flex;align-items: center;justify-content: space-evenly;">
                                                             <span class="ti-trash" style="color: white;font-size: 20px;"> </span>
-                                                            <a style="text-decoration:none;font-size:20px;" onclick="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này')" href="?orderID=<?php echo $orderID ?>">Hủy đơn</a>
+                                                            <a style="text-decoration:none;font-size:16px;" onclick="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này')" href="?orderID=<?php echo $orderID ?>">ยกเลิกการสั่งซื้อ</a>
                                                         </div>
                                                     </td>
                                             <?php
@@ -244,9 +244,9 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                         <table id="daNH" class="daNH table_1">
                                             <thead>
                                                 <tr>
-                                                    <th>Đơn hàng: <?php echo $count; ?></th>
-                                                    <th colspan="5">Ngày đặt: <?php echo $result_date1['order_time']; ?></th>
-                                                    <th colspan="2" class="toggle">Xem chi tiết</th>
+                                                    <th>สินค้า: <?php echo $count; ?></th>
+                                                    <th colspan="5">วันที่จองสินค้า: <?php echo $result_date1['order_time']; ?></th>
+                                                    <th colspan="2" class="toggle">ดูรายละเอียดการสั่งซื้อ</th>
                                                 </tr>
                                             </thead>
                                             <!-- </table> -->
@@ -254,15 +254,15 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                             <table class="display display_1">
                                                 <thead style="background-color:blue;">
                                                     <tr>
-                                                        <th>STT</th>
-                                                        <th>Ảnh</th>
-                                                        <th>Tên</th>
-                                                        <th>Size</th>
-                                                        <th>Giá</th>
-                                                        <th>Số lượng</th>
-                                                        <th>Thành tiền</th>
-                                                        <th>Địa chỉ</th>
-                                                        <th>Tình trạng</th>
+                                                        <th>หมายเลขสินค้า</th>
+                                                        <th>รูปภาพสินค้า</th>
+                                                        <th>ชื่อสินค้า</th>
+                                                        <th>ขนาด</th>
+                                                        <th>ราคาสินค้า</th>
+                                                        <th>จำนวนสินค้า</th>
+                                                        <th>จำนวนเงิน</th>
+                                                        <th>ที่อยู่</th>
+                                                        <th>สถานะของสินค้า</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -290,7 +290,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                                 <td><?php echo $result_OrderHistory1['size'] ?></td>
                                                                 <td>
                                                                     <div class="cart-btn">
-                                                                        <span><?php echo number_format($result_OrderHistory1['price'], 0, ',', '.') . "" . "đ" ?></span>
+                                                                        <span><?php echo number_format($result_OrderHistory1['price'], 0, ',', '.') . "" . " บาท" ?></span>
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -304,7 +304,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
 
                                                                 <td>
                                                                     <span class="cart-current"><?php
-                                                                                                echo number_format($result_OrderHistory1['thanhtien'], 0, ',', '.') . " " . "đ";
+                                                                                                echo number_format($result_OrderHistory1['thanhtien'], 0, ',', '.') . " " . " บาท";
                                                                                                 ?></span>
                                                                 </td>
                                                                 <td>
@@ -318,7 +318,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
 
                                                         }
                                                         ?>
-                                                        <td colspan="6" style="background-color:#2a2b2c;text-align:center;color:white;">Tổng đơn hàng: <?php echo number_format($total1, 0, ',', '.') . "" . "đ"; ?></td>
+                                                        <td colspan="6" style="background-color:#2a2b2c;text-align:center;color:white;">Tổng đơn hàng: <?php echo number_format($total1, 0, ',', '.') . "" . " บาท"; ?></td>
                                                         <td colspan="3" class="confirm" style="background-color:#2a2b2c;">
                                                             <div>
                                                                 <span class="ti-check" style="color:white; font-size:15px;"></span>
@@ -353,10 +353,10 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                             <table id="daGiao" class="daGiao table_2">
                                                 <thead>
                                                     <tr>
-                                                        <th>Đơn hàng: <?php echo $count; ?></th>
-                                                        <th colspan="3">Ngày đặt: <?php echo $result_date2['order_time']; ?></th>
-                                                        <th colspan="2">Ngày nhận: <?php echo $result_date2['recieve_time']; ?></th>
-                                                        <th colspan="2" class="toggle">Xem chi tiết</th>
+                                                        <th>สินค้า: <?php echo $count; ?></th>
+                                                        <th colspan="3">วันที่จองสินค้า: <?php echo $result_date2['order_time']; ?></th>
+                                                        <th colspan="2">วันที่ได้รับสินค้า: <?php echo $result_date2['recieve_time']; ?></th>
+                                                        <th colspan="2" class="toggle">ดูรายละเอียดการสั่งซื้อ</th>
                                                     </tr>
                                                 </thead>
                                                 <!-- </table> -->
@@ -364,15 +364,15 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                 <table class="display display_2">
                                                     <thead style="background-color:blue;">
                                                         <tr>
-                                                            <th>STT</th>
-                                                            <th>Ảnh</th>
-                                                            <th>Tên</th>
-                                                            <th>Size</th>
-                                                            <th>Giá</th>
-                                                            <th>Số lượng</th>
-                                                            <th>Thành tiền</th>
-                                                            <th>Địa chỉ</th>
-                                                            <th>Tình trạng</th>
+                                                            <th>หมายเลขสินค้า</th>
+                                                            <th>รูปภาพสินค้า</th>
+                                                            <th>ชื่อสินค้า</th>
+                                                            <th>ขนาด</th>
+                                                            <th>ราคาสินค้า</th>
+                                                            <th>จำนวนสินค้า</th>
+                                                            <th>จำนวนเงิน</th>
+                                                            <th>ที่อยู่</th>
+                                                            <th>สถานะของสินค้า</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -400,7 +400,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                                     <td><?php echo $result_OrderHistory2['size'] ?></td>
                                                                     <td>
                                                                         <div class="cart-btn">
-                                                                            <span><?php echo number_format($result_OrderHistory2['price'], 0, ',', '.') . "" . "đ" ?></span>
+                                                                            <span><?php echo number_format($result_OrderHistory2['price'], 0, ',', '.') . "" . " บาท" ?></span>
                                                                         </div>
                                                                     </td>
                                                                     <td>
@@ -414,7 +414,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
 
                                                                     <td>
                                                                         <span class="cart-current"><?php
-                                                                                                    echo number_format($result_OrderHistory2['thanhtien'], 0, ',', '.') . " " . "đ";
+                                                                                                    echo number_format($result_OrderHistory2['thanhtien'], 0, ',', '.') . " " . " บาท";
                                                                                                     ?></span>
                                                                     </td>
                                                                     <td>
@@ -428,7 +428,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                             <?php
                                                             }
                                                             ?>
-                                                            <td colspan="7" style="background-color:#2a2b2c;text-align:center;color:white;">Tổng đơn hàng: <?php echo number_format($total2, 0, ',', '.') . "" . "đ"; ?></td>
+                                                            <td colspan="7" style="background-color:#2a2b2c;text-align:center;color:white;">Tổng đơn hàng: <?php echo number_format($total2, 0, ',', '.') . "" . " บาท"; ?></td>
 
                                                             <td colspan="2" class="confirm" style="background-color:#2a2b2c">
                                                             <div style="display: flex;align-items: center ; justify-content: center;">
@@ -465,10 +465,10 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                 <table id="traHang" class="traHang table_3">
                                                     <thead>
                                                         <tr>
-                                                            <th>Đơn hàng: <?php echo $count; ?></th>
-                                                            <th colspan="3">Ngày đặt: <?php echo $result_date2['order_time']; ?></th>
-                                                            <th colspan="2">Ngày nhận: <?php echo $result_date2['recieve_time']; ?></th>
-                                                            <th colspan="2" class="toggle">Xem chi tiết</th>
+                                                            <th>สินค้า: <?php echo $count; ?></th>
+                                                            <th colspan="3">วันที่จองสินค้า: <?php echo $result_date2['order_time']; ?></th>
+                                                            <th colspan="2">วันที่ได้รับสินค้า: <?php echo $result_date2['recieve_time']; ?></th>
+                                                            <th colspan="2" class="toggle">ดูรายละเอียดการสั่งซื้อ</th>
                                                         </tr>
                                                     </thead>
                                                     <!-- </table> -->
@@ -476,15 +476,15 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                     <table class="display display_3">
                                                         <thead style="background-color:blue;">
                                                             <tr>
-                                                                <th>STT</th>
-                                                                <th>Ảnh</th>
-                                                                <th>Tên</th>
-                                                                <th>Size</th>
-                                                                <th>Giá</th>
-                                                                <th>Số lượng</th>
-                                                                <th>Thành tiền</th>
-                                                                <th>Địa chỉ</th>
-                                                                <th>Tình trạng</th>
+                                                                <th>หมายเลขสินค้า</th>
+                                                                <th>รูปภาพสินค้า</th>
+                                                                <th>ชื่อสินค้า</th>
+                                                                <th>ขนาด</th>
+                                                                <th>ราคาสินค้า</th>
+                                                                <th>จำนวนสินค้า</th>
+                                                                <th>จำนวนเงิน</th>
+                                                                <th>ที่อยู่</th>
+                                                                <th>สถานะของสินค้า</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -512,7 +512,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                                         <td><?php echo $result_OrderHistory2['size'] ?></td>
                                                                         <td>
                                                                             <div class="cart-btn">
-                                                                                <span><?php echo number_format($result_OrderHistory2['price'], 0, ',', '.') . "" . "đ" ?></span>
+                                                                                <span><?php echo number_format($result_OrderHistory2['price'], 0, ',', '.') . "" . " บาท" ?></span>
                                                                             </div>
                                                                         </td>
                                                                         <td>
@@ -526,7 +526,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
 
                                                                         <td>
                                                                             <span class="cart-current"><?php
-                                                                                                        echo number_format($result_OrderHistory2['thanhtien'], 0, ',', '.') . " " . "đ";
+                                                                                                        echo number_format($result_OrderHistory2['thanhtien'], 0, ',', '.') . " " . " บาท";
                                                                                                         ?></span>
                                                                         </td>
                                                                         <td>
@@ -540,7 +540,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                                 <?php
                                                                 }
                                                                 ?>
-                                                                <td colspan="9" style="background-color:#2a2b2c;text-align:center;color:white;">Tổng đơn hàng: <?php echo number_format($total2, 0, ',', '.') . "" . "đ"; ?></td>
+                                                                <td colspan="9" style="background-color:#2a2b2c;text-align:center;color:white;">Tổng đơn hàng: <?php echo number_format($total2, 0, ',', '.') . "" . " บาท"; ?></td>
 
                                                         <?php
                                                             }
@@ -570,9 +570,9 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                     <table id="daHuy" class="daHuy table_4">
                                                         <thead>
                                                             <tr>
-                                                                <th>Đơn hàng: <?php echo $count; ?></th>
-                                                                <th colspan="4">Ngày đặt: <?php echo $result_date2['order_time']; ?></th>
-                                                                <th colspan="3" class="toggle">Xem chi tiết</th>
+                                                                <th>สินค้า: <?php echo $count; ?></th>
+                                                                <th colspan="4">วันที่จองสินค้า: <?php echo $result_date2['order_time']; ?></th>
+                                                                <th colspan="3" class="toggle">ดูรายละเอียดการสั่งซื้อ</th>
                                                             </tr>
                                                         </thead>
                                                         <!-- </table> -->
@@ -580,15 +580,15 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                         <table class="display display_4">
                                                             <thead style="background-color:blue;">
                                                                 <tr>
-                                                                    <th>STT</th>
-                                                                    <th>Ảnh</th>
-                                                                    <th>Tên</th>
-                                                                    <th>Size</th>
-                                                                    <th>Giá</th>
-                                                                    <th>Số lượng</th>
-                                                                    <th>Thành tiền</th>
-                                                                    <th>Địa chỉ</th>
-                                                                    <th>Tình trạng</th>
+                                                                    <th>หมายเลขสินค้า</th>
+                                                                    <th>รูปภาพสินค้า</th>
+                                                                    <th>ชื่อสินค้า</th>
+                                                                    <th>ขนาด</th>
+                                                                    <th>ราคาสินค้า</th>
+                                                                    <th>จำนวนสินค้า</th>
+                                                                    <th>จำนวนเงิน</th>
+                                                                    <th>ที่อยู่</th>
+                                                                    <th>สถานะของสินค้า</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -615,7 +615,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                                             <td><?php echo $result_OrderHistory2['size'] ?></td>
                                                                             <td>
                                                                                 <div class="cart-btn">
-                                                                                    <span><?php echo number_format($result_OrderHistory2['price'], 0, ',', '.') . "" . "đ" ?></span>
+                                                                                    <span><?php echo number_format($result_OrderHistory2['price'], 0, ',', '.') . "" . " บาท" ?></span>
                                                                                 </div>
                                                                             </td>
                                                                             <td>
@@ -629,7 +629,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
 
                                                                             <td>
                                                                                 <span class="cart-current"><?php
-                                                                                                            echo number_format($result_OrderHistory2['thanhtien'], 0, ',', '.') . " " . "đ";
+                                                                                                            echo number_format($result_OrderHistory2['thanhtien'], 0, ',', '.') . " " . " บาท";
                                                                                                             ?></span>
                                                                             </td>
                                                                             <td>
@@ -640,7 +640,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                                             <?php
                                                                             if ($result_OrderHistory2['status'] == -1) {
                                                                             ?>
-                                                                                <td style="color:red;cursor:pointer">Đã hủy đơn</td>
+                                                                                <td style="color:red;cursor:pointer">ยกเลิกสินค้า</td>
                                                                             <?php
                                                                             } else {
                                                                             ?>
@@ -651,7 +651,7 @@ if (isset($_GET['status']) && $_GET['status'] == 2) {
                                                                     <?php
                                                                     }
                                                                     ?>
-                                                                    <td colspan="9" style="background-color:#2a2b2c;text-align:center;color:white;">Tổng đơn hàng: <?php echo number_format($total2, 0, ',', '.') . "" . "đ"; ?></td>
+                                                                    <td colspan="9" style="background-color:#2a2b2c;text-align:center;color:white;">ยอดสั่งซื้อ: <?php echo number_format($total2, 0, ',', '.') . "" . " บาท"; ?></td>
 
                                                             <?php
                                                                 }

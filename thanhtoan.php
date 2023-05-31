@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giỏ hàng</title>
+    <title>ตะกร้าสินค้า</title>
 </head>
 <?php
 if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
@@ -40,27 +40,26 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
                                     <div class="checkout-process-bar block-border">
                                         <ul>
                                             <li class="">
-                                                <span>Giỏ hàng</span>
+                                                <span>ตะกร้าสินค้า</span>
                                             </li>
-                                            <li class="active"><span>Đặt hàng</span></li>
-                                            <li class=""><span>Thanh toán</span></li>
-                                            <li><span>Hoàn thành đơn</span></li>
+                                            <li class="active"><span>ตรวจสอบสินค้า</span></li>
+                                            <li class=""><span>ชำระสินค้า</span></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col l-12" style="margin: 20px 0;">
-                                    <h3 style="padding: 10px;font-family: var(--font-family-sans-serif);">Thông tin sản phẩm</h3>
+                                    <h3 style="padding: 10px;font-family: var(--font-family-sans-serif);">รายละเอียดสินค้า</h3>
                                     <div style="border: 1px solid #e7e8e9;border-radius: 32px 0px 0px;">
                                         <table>
                                             <thead>
                                                 <tr>
-                                                    <th>ID</th>
-                                                    <th>Ảnh</th>
-                                                    <th>Tên</th>
-                                                    <th>Size</th>
-                                                    <th>Giá</th>
-                                                    <th>Số lượng</th>
-                                                    <th>Số tiền</th>
+                                                    <th>หมายเลขสินค้า</th>
+                                                    <th>รูปภาพสินค้า</th>
+                                                    <th>ชื่อสินค้า</th>
+                                                    <th>ขนาด</th>
+                                                    <th>ราคาสินค้า</th>
+                                                    <th>จำนวนสินค้า</th>
+                                                    <th>จำนวนเงิน</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -87,7 +86,7 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
                                                             <td><?php echo $result_ProductCat['size'] ?></td>
                                                             <td>
                                                                 <div class="cart-btn">
-                                                                    <span><?php echo number_format($result_ProductCat['price'], 0, ',', '.') . "" . "đ" ?></span>
+                                                                    <span><?php echo number_format($result_ProductCat['price'], 0, ',', '.') . "" . " บาท" ?></span>
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -101,7 +100,7 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
 
                                                             <td>
                                                                 <span class="cart-current"><?php $total = $result_ProductCat['price'] * $result_ProductCat['quantity'];
-                                                                                            echo number_format($total, 0, ',', '.') . " " . "đ";
+                                                                                            echo number_format($total, 0, ',', '.') . " " . " บาท";
                                                                                             ?></span>
                                                             </td>
 
@@ -128,7 +127,7 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
 
                                 </div>
                                 <div class="col l-12" style="margin: 20px 0;">
-                                    <h3 style="padding: 10px;font-family: var(--font-family-sans-serif);">Địa chỉ giao hàng</h3>
+                                    <h3 style="padding: 10px;font-family: var(--font-family-sans-serif);">ที่อยู่สำหรับการจัดส่ง</h3>
                                     <div style="border: 1px solid #e7e8e9;border-radius: 32px 0px 0px;">
                                         <?php
                                         $userId = Session::get('user_id');
@@ -138,23 +137,23 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
                                             <table>
                                                 <tbody>
                                                     <tr style="line-height:50px;">
-                                                        <td>Tên: </td>
+                                                        <td>ชื่อ - นามสกุล: </td>
                                                         <td><?php echo $result_infor_user['name'] ?></td>
                                                     </tr>
                                                     <tr style="line-height:50px;">
-                                                        <td>Email: </td>
+                                                        <td>อีเมล: </td>
                                                         <td><?php echo $result_infor_user['email'] ?></td>
                                                     </tr>
                                                     <tr style="line-height:50px;">
-                                                        <td>SĐT: </td>
+                                                        <td>เบอร์โทรศัพท์: </td>
                                                         <td><?php echo $result_infor_user['sdt'] ?></td>
                                                     </tr>
                                                     <tr style="line-height:50px;">
-                                                        <td>Address: </td>
+                                                        <td>ที่อยู่: </td>
                                                         <td><?php echo $result_infor_user['diaChi'] ?></td>
                                                     </tr>
                                                     <tr style="line-height:50px;">
-                                                        <td colspan="2" style="cursor:pointer;"><a href="account.php" style="text-decoration:none;color:black; ">Chỉnh sửa thông tin</a></td>
+                                                        <td colspan="2" style="cursor:pointer;"><a href="account.php" style="text-decoration:none;color:black; ">แก้ไขข้อมูล</a></td>
                                                     </tr>
                                                 </tbody>
                                             <?php
@@ -168,14 +167,14 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
                             </div>
                             <div class="col l-4">
                             <div class="cart-voucher">
-								<h3>Tóm tắt đơn hàng</h3>
+								<h3>จำนวนตะกร้าสินค้าทั้งหมด</h3>
 								<?php
 								$check_cart = $cat->checkCart(Session::get('user_id'));
 								if ($check_cart) {
 								?>
 									<div style="display: flex;justify-content: space-between; margin: 20px 0;">
 										<span class="voucher-title">
-											<span>Tổng sản phẩm</span>
+											<span>จำนวนสินค้า</span>
 										</span>
 										<span class="sum-product"><?php
 																	Session::set('sum', $dem);
@@ -184,30 +183,30 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
 									</div>
 									<div style="display: flex;justify-content: space-between; margin: 20px 0;">
 										<div class="voucher-title">
-											<span>Tổng tiền hàng</span>
+											<span>ราคาสินค้า</span>
 										</div>
-										<span class="sum-product"><?php echo number_format($subTotal, 0, ',', '.') . "" . "đ" ?></span>
+										<span class="sum-product"><?php echo number_format($subTotal, 0, ',', '.') . "" . " บาท" ?></span>
 									</div>
 									<div style="display: flex;justify-content: space-between; margin: 20px 0;">
-										<span class="sum-product">Tiền thuế(VAT 10%)</span>
+										<span class="sum-product">ภาษี (VAT 10%)</span>
 										<span class="sum-product">
 											<?php
 											$vat = $subTotal * 0.1;
-											echo number_format($vat, 0, ',', '.') . "" . "đ";
+											echo number_format($vat, 0, ',', '.') . "" . " บาท";
 											?>
 										</span>
 									</div>
 									<div class="cart-purchase">
-										<span class="sum-product">Thành tiền</span>
+										<span class="sum-product">ราคาทั้งหมด</span>
 										<span class="sum-product" style="font-weight: 800;">
 											<?php
 											$grand_Total = $subTotal - $vat;
-											echo number_format($grand_Total, 0, ',', '.') . "" . "đ"
+											echo number_format($grand_Total, 0, ',', '.') . "" . " บาท"
 											?>
 										</span>
 									</div>
 									<div class="cart-purchase-button">
-                                    <p class="btn"><a href="?orderid=order" id="btn_order" onclick="return alert('Bạn đã đặt hàng thành công')">Xác nhận đặt hàng</a></p>
+                                    <p class="btn"><a href="?orderid=order" id="btn_order" onclick="return alert('การสั่งซื้อเสร็จสิ้นเรียบร้อย')">ยืนยันการสั่งซื้อ</a></p>
 									</div>
 								<?php
 								} else {
